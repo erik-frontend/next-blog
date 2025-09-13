@@ -6,19 +6,16 @@ export default function ContactPage() {
   return (
     <section className='about h-[80vh] flex items-center'>
       <div className="container-center ">
-        <div className="flex-1 flex flex-col gap-12">
-          <h1 className='text-[85px]'>Creative Thoughts Agency</h1>
-          <div className="h-[50px] relative grayscale-[1] max-w-[500px]">
-            <Image src="/brands.webp" alt='brands' fill />
+          <div className="relative grayscale-[1]">
+            <Image src="/contact.svg" alt='brands' width={500} height={500} layout='responsive'/>
           </div>
-        </div>
         <div className="flex-1 relative min-h-[500px] ">
-          <Form>
-            <input name="text" type='text' placeholder="Name" />
-            <input name="email" type='email' placeholder="Email" />
-            <input name="mobile" type='number' placeholder="Phone number" />
-            <textarea name="message" placeholder="Message" />
-            <button type="submit">Send</button>
+          <Form className='flex flex-col gap-5'>
+            <input name="text" type='text' placeholder="Name" className='input-style animation'/>
+            <input name="email" type='email' placeholder="Email" className='input-style animation'/>
+            <input name="mobile" type='number' placeholder="Phone number" className='input-style animation'/>
+            <textarea name="message" placeholder="Message" className='input-style animation h-[280px] resize-none'/>
+            <button type="submit" className='p-5 bg-[#3673fd] text-white capitalize font-bold rounded-[5px] cursor-pointer'>Send</button>
           </Form>
         </div>
       </div>
