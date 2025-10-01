@@ -24,6 +24,19 @@ a {
   color: inherit;
 }
 
+.burger {
+  display: none;
+
+  @media(max-width: 768px) {
+    display: flex;
+    position: relative;
+    z-index: 3;
+    svg{
+      font-size: 40px;
+    }
+  }
+}
+
 @layer components {
   .animation {
     transition: .3s linear;

@@ -49,8 +49,8 @@ async function SinglePage({ params }) {
   return (
     <div className='mx-auto max-w-[128rem] py-20 px-20'>
       <div className="flex flex-col">
-        <div className="relative w-full h-[420px] overflow-hidden rounded-2xl">
-          <Image src={imageUrl ?? "/file.svg"} alt={post.title} fill className='object-cover' sizes='(min-width: 1280px) 50vw, 100vw' priority />
+        <div className="relative w-full h-[500px] lg:w-1/2 ">
+          <Image src={imageUrl ?? "/file.svg"} alt={post.title} fill className='object-cover rounded-2xl' sizes='(min-width: 980px) 50vw, 100vw' priority />
         </div>
         <h1 className="text-[64px] leading-[1.1] font-semibold capitalize mt-14">
           {truncateText(post.title, 50)}
@@ -68,11 +68,12 @@ async function SinglePage({ params }) {
             <span className='font-medium'>{data}</span>
           </div>
         </div>
-        <div className="mt-14 text-[18px] text-zinc-200">
+        <div className="mt-14 text-[24px] text-zinc-200">
           <p>
             {post.body}
           </p>
         </div>
+        <Link href="/blog" className='underline mt-16 px-3 py-2 border-2 border-amber-50 w-[220px] text-[20px] text-center'>Back to the Blog</Link>
       </div>
     </div>
   )
